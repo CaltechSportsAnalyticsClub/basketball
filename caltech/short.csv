@@ -1,0 +1,6 @@
+sep=,
+#,Player,Team,GP,%Time,Poss,Pts,PPP,FG Miss,FG Made,FG Att,FG%,eFG%,TO%,%FT,%SF,Score%
+1,"Jared Brown","Westmont Warriors",27,14.3,31,34,1.097,14,17,31,54.8,54.8,0,0,0,54.8
+2,"Ajay Singh","Westmont Warriors",25,21.8,22,20,0.909,12,10,22,45.5,45.5,0,0,0,45.5
+3,"Cade Roth","Westmont Warriors",20,10.7,12,16,1.333,5,7,12,58.3,58.3,0,16.7,16.7,58.3
+4,"Nate Meithof","Westmont Warriors",26,7.2,16,14,0.875,8,6,14,42.9,42.9,0,12.5,12.5,50

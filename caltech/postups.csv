@@ -1,0 +1,6 @@
+sep=,
+#,Player,Team,GP,%Time,Poss,Pts,PPP,FG Miss,FG Made,FG Att,FG%,eFG%,TO%,%FT,%SF,Score%
+1,"Nate Meithof","Westmont Warriors",26,6.2,25,32,1.28,10,15,25,60,60,0,8,8,60
+2,"Ajay Singh","Westmont Warriors",25,5.8,16,21,1.313,6,10,16,62.5,62.5,0,6.3,6.3,62.5
+3,"Kyler Warren","Westmont Warriors",26,16,16,10,0.625,11,5,16,31.3,31.3,0,0,0,31.3
+3,"Jalen Townsell","Westmont Warriors",27,3.7,10,10,1,5,5,10,50,50,0,10,10,50
