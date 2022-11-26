@@ -1,0 +1,1 @@
+from synergy_scraper.cumulative_box_score import CumulativeBoxScore

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: synergy-scraper
+Version: 0.0.0
+Author: Caltech Sports Analytics Club
+Author-email: sportsanalyticsclub@caltech.edu
+Requires-Python: ~=3.9
+License-File: LICENSE

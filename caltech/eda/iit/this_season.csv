@@ -1,0 +1,11 @@
+sep=,
+#,Player,Team,GP,%Time,Poss,Pts,PPP,FG Miss,FG Made,FG Att,FG%,eFG%,TO%,%FT,Score%,%SF
+1,"Immanuel Adams","Illinois Tech Scarlet Hawks",2,100,1.5,2,1.333,0.5,1,1.5,66.7,66.7,0,0,66.7,0
+2,"Furkan Mohamed","Illinois Tech Scarlet Hawks",2,100,3,3.5,1.167,1,1,2,50,62.5,0,33.3,50,16.7
+3,"Ahmad Muhammad","Illinois Tech Scarlet Hawks",2,100,9.5,10.5,1.105,2.5,4.5,7,64.3,71.4,21.1,5.3,52.6,0
+4,"Otis Reale","Illinois Tech Scarlet Hawks",2,100,22.5,23.5,1.044,7.5,7,14.5,48.3,51.7,15.6,22.2,51.1,11.1
+5,"Caden Gigstad","Illinois Tech Scarlet Hawks",2,100,8,8,1,3,2.5,5.5,45.5,59.1,18.8,12.5,43.8,6.3
+5,"Zack Davis","Illinois Tech Scarlet Hawks",1,100,6,6,1,1,2,3,66.7,66.7,16.7,33.3,66.7,16.7
+7,"Milos Dugalic","Illinois Tech Scarlet Hawks",2,100,19.5,18.5,0.949,7,6.5,13.5,48.1,55.6,23.1,10.3,41,7.7
+8,"Garrison Carter","Illinois Tech Scarlet Hawks",2,100,10.5,9,0.857,4,3.5,7.5,46.7,53.3,23.8,4.8,38.1,0
+9,"Derrick Faulkner","Illinois Tech Scarlet Hawks",2,100,2.5,2,0.8,1,1,2,50,50,20,0,40,0

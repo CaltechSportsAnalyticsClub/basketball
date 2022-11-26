@@ -1,0 +1,13 @@
+sep=,
+#,Player,Team,GP,%Time,Poss,Pts,PPP,FG Miss,FG Made,FG Att,FG%,eFG%,TO%,%FT,Score%,%SF
+1,"Duncan Ellis","Occidental Tigers",1,100,3,5,1.667,0,1,1,100,150,0,66.7,66.7,0
+2,"Andrew Waldman","Occidental Tigers",1,100,3,4,1.333,1,2,3,66.7,66.7,0,0,66.7,0
+3,"Aiden Williams","Occidental Tigers",1,100,9,11,1.222,5,4,9,44.4,61.1,0,0,44.4,0
+4,"Bernard Cassidy","Occidental Tigers",1,100,10,8,0.8,3,4,7,57.1,57.1,20,10,40,10
+5,"Noah Delorme","Occidental Tigers",1,100,4,2,0.5,1,1,2,50,50,50,25,25,25
+5,"Ryan Hakl","Occidental Tigers",1,100,4,4,1,2,2,4,50,50,0,0,50,0
+7,"Sydney Shipp","Occidental Tigers",1,100,19,15,0.789,8,7,15,46.7,46.7,10.5,15.8,42.1,10.5
+8,"Kyle Dosa","Occidental Tigers",1,100,15,12,0.8,7,3,10,30,40,20,13.3,33.3,13.3
+8,"Anthony Hollerich","Occidental Tigers",1,100,13,9,0.692,6,4,10,40,40,23.1,7.7,30.8,7.7
+8,"Jacob Koretz","Occidental Tigers",1,100,6,4,0.667,3,2,5,40,40,16.7,0,33.3,0
+11,"Henry Wilson","Occidental Tigers",1,100,1,2,2,0,0,0,0,0,0,100,100,100

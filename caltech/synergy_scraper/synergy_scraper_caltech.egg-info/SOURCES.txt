@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+synergy_scraper/__init__.py
+synergy_scraper/cumulative_box_score.py
+synergy_scraper_caltech.egg-info/PKG-INFO
+synergy_scraper_caltech.egg-info/SOURCES.txt
+synergy_scraper_caltech.egg-info/dependency_links.txt
+synergy_scraper_caltech.egg-info/requires.txt
+synergy_scraper_caltech.egg-info/top_level.txt
