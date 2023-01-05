@@ -1,7 +1,7 @@
 import pandas as pd
 import requests as r
-import re
 import numpy as np
+import helpers
 
 class PlayByPlay:
   def __init__(self, game_id=None):
@@ -15,9 +15,52 @@ class PlayByPlay:
   def _get_base_df(self):
     try:
         pbp = r.get(self._pbp_link()).json()
-        self.pbp_df = pd.DataFrame([y for x in [p['playStats'] for p in pbp['periods']] for y in x])
+        pbp_dfs = [pd.DataFrame(x) for x in [p['playStats'] for p in pbp['periods']]]
+        proper_dfs = []
+        for df in pbp_dfs:
+          df["homePlayer"] = df["homeText"].apply(helpers.find_player)
+          df["visitorPlayer"] = df["visitorText"].apply(helpers.find_player)
+          df["homePlayers"] = None
+          df["visitorPlayers"] = None
+          proper_dfs.append(self._fill_in_lineups(df))
+        
+        #self.pbp_df = pd.DataFrame([y for x in [p['playStats'] for p in pbp['periods']] for y in x])
+        self.pbp_df = pd.concat(proper_dfs)
     except:
         raise ValueError("Request failed: Invalid game id")
+  
+  def _fill_in_lineups(self, df):
+    teams = ["home", "visitor"]
+
+    for i, row in df.iterrows():
+        for team in teams:
+            teamPlayer = f"{team}Player"
+            teamPlayers = f"{team}Players"
+            teamText = f"{team}Text"
+            is_home = team == "home"
+            current_lineup = []
+            if i == 0:
+                continue
+            current_lineup = helpers.string_to_list(df.iloc[i - 1][teamPlayers])
+            df.loc[i, teamPlayers] = helpers.list_to_string(current_lineup)
+            if row[teamPlayer] == "":
+                continue
+            if "Subbing in" in row[teamText]:
+                if row[teamPlayer] not in current_lineup:
+                    current_lineup.append(row[teamPlayer])
+                df.loc[i, teamPlayers] = helpers.list_to_string(current_lineup)
+                df[teamPlayers] = df[teamPlayers].ffill()
+                continue
+            if row[teamPlayer] not in current_lineup:
+                df.apply(helpers.add_player_to_list_retro, args=(row[teamPlayer], is_home, i), axis=1)
+            current_lineup = helpers.string_to_list(row[teamPlayers])
+            if "Subbing out" in row[teamText]:
+                current_lineup.remove(row[teamPlayer])
+                df.loc[i, teamPlayers] = helpers.list_to_string(current_lineup)
+                df[teamPlayers] = df[teamPlayers].ffill()
+                continue
+
+    return df
   
   def _fill_in_cum_stats(self):
     self.pbp_df['homeRebounds'] = self.pbp_df['homeText'].str.contains(' REBOUND ', case=False).cumsum()
@@ -72,14 +115,10 @@ class PlayByPlay:
     self.pbp_df['score'] = self.pbp_df['score'].mask(self.pbp_df['score'] == "")
     self.pbp_df['score'] = self.pbp_df['score'].bfill()
     self.pbp_df['score'] = self.pbp_df['score'].ffill() 
-  
+
   def scrape(self):
     self._get_base_df()
     self._fill_in_score()
     self._fill_in_cum_stats()
     self._fill_in_possessions()
     self.did_scrape = True
-
-a = PlayByPlay(game_id=6060646)
-a.scrape()
-print(a.pbp_df)
